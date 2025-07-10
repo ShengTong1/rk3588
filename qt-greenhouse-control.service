@@ -1,0 +1,30 @@
+[Unit]
+Description=智能温室大棚控制系统 (Qt MainWindow)
+After=graphical-session.target hardware-setup.service
+Wants=graphical-session.target
+Requires=hardware-setup.service
+
+[Service]
+Type=simple
+User=elf
+Group=elf
+WorkingDirectory=/home/elf/work/qt_mainwindow
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=QT_QPA_PLATFORM=xcb
+Environment=HOME=/home/elf
+Environment=TZ=Asia/Shanghai
+Environment=LC_TIME=zh_CN.UTF-8
+ExecStartPre=/bin/sleep 5
+ExecStart=/home/elf/work/qt_mainwindow/start.sh
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=300
+StartLimitBurst=3
+StandardOutput=journal
+StandardError=journal
+KillMode=mixed
+TimeoutStopSec=30
+
+[Install]
+WantedBy=graphical.target

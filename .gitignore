@@ -1,0 +1,47 @@
+# Qt编译生成文件
+*.o
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+Makefile*
+*.pro.user*
+*.autosave
+
+# 可执行文件
+wonderfulnewworld
+
+# 日志文件
+*.log
+logs/
+
+# Python缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 配置文件（可能包含敏感信息）
+config/local_*
+*.local
+
+# 测试输出
+test_output/
+debug_output/

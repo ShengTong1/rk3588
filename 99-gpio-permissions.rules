@@ -1,0 +1,19 @@
+# GPIO和I2C权限设置udev规则 - 使用gpio组权限
+# 当GPIO和I2C设备被创建时自动设置组权限
+
+# 设置GPIO基本文件权限和组
+SUBSYSTEM=="gpio", KERNEL=="gpiochip*", ACTION=="add", RUN+="/bin/chgrp gpio /sys/class/gpio/export /sys/class/gpio/unexport", RUN+="/bin/chmod 664 /sys/class/gpio/export /sys/class/gpio/unexport"
+
+# 设置I2C设备权限 - GY30光照传感器使用I2C7
+SUBSYSTEM=="i2c-dev", KERNEL=="i2c-7", ACTION=="add", RUN+="/bin/chgrp gpio /dev/i2c-7", RUN+="/bin/chmod 664 /dev/i2c-7"
+SUBSYSTEM=="i2c-dev", KERNEL=="i2c-*", ACTION=="add", RUN+="/bin/chgrp gpio /dev/%k", RUN+="/bin/chmod 664 /dev/%k"
+
+# 为特定GPIO引脚设置gpio组权限
+SUBSYSTEM=="gpio", KERNEL=="gpio99", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio116", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio117", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio138", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio139", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio110", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio105", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"
+SUBSYSTEM=="gpio", KERNEL=="gpio103", ACTION=="add", RUN+="/bin/chgrp gpio /sys%p/direction /sys%p/value", RUN+="/bin/chmod 664 /sys%p/direction /sys%p/value"

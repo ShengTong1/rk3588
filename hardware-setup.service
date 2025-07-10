@@ -1,0 +1,12 @@
+[Unit]
+Description=智能温室硬件权限设置服务
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/elf/work/qt_mainwindow/setup_hardware_permissions.sh
+RemainAfterExit=yes
+User=root
+
+[Install]
+WantedBy=multi-user.target

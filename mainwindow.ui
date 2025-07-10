@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>灵枢智慧农业边缘智控系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QWidget" name="mainPage">
+       <layout class="QVBoxLayout" name="mainLayout">
+        <item>
+         <widget class="QLabel" name="timeLabel">
+          <property name="text">
+           <string>当前时间：</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="newActionButton">
+          <property name="text">
+           <string>🤖 AI智能决策模式</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="weatherLabel">
+          <property name="text">
+           <string>温室环境信息：</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="buttonLayout">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btn1">
+            <property name="text">
+             <string>💡 补光灯控制</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btn2">
+            <property name="text">
+             <string>🌿 智能遮光系统</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btn3">
+            <property name="text">
+             <string>🔍 YOLOv8实时检测</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btn4">
+            <property name="text">
+             <string>🌤️ 天气信息</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="btn5">
+            <property name="text">
+             <string>🏠 大棚实时信息</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="btn6">
+            <property name="text">
+             <string>💧 智能灌溉系统</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page1"/>
+      <widget class="QWidget" name="page2"/>
+      <widget class="QWidget" name="page3"/>
+      <widget class="QWidget" name="page4"/>
+      <widget class="QWidget" name="page5"/>
+      <widget class="QWidget" name="page6"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

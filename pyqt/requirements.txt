@@ -1,0 +1,23 @@
+# RK3588 YOLOv8实时检测系统依赖包
+
+# PyQt5 - GUI框架
+PyQt5>=5.15.0
+
+# OpenCV - 计算机视觉库
+opencv-python>=4.5.0
+
+# NumPy - 数值计算库
+numpy>=1.19.0
+
+# RKNN API - RK NPU推理库
+# 注意: rknn-toolkit2需要从瑞芯微官方获取并安装
+# rknn-toolkit2
+
+# 其他可能需要的包
+Pillow>=8.0.0
+matplotlib>=3.3.0
+
+# 开发和调试工具（可选）
+# pytest>=6.0.0
+# black>=21.0.0
+# flake8>=3.8.0
